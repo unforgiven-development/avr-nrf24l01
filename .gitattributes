@@ -1,0 +1,7 @@
+#
+# .gitattributes
+#
+
+## GENERIC ##
+*						text=auto
+

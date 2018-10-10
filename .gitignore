@@ -1,0 +1,23 @@
+#
+# .gitignore
+#
+
+## GENERAL ##
+*~
+*.bak
+
+
+## BUILD ARTIFACTS ##
+*.o
+*.so
+*.so.*
+*.ko
+
+
+## BUILT FILES ##
+*.elf
+*.hex
+*.bin
+*.srec
+*.s19
+
