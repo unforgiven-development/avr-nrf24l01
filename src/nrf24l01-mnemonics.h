@@ -1,28 +1,44 @@
 /**
- *  From the specifications available in the download section of
- *  http://www.nordicsemi.com/kor/Products/2.4GHz-RF/nRF24L01P
+ * \file nrf24l01-mnemonics.h
+ * \brief Defines the "menomic" symbols for the registers and operations of the nRF24L01(+) device
+ *
+ * \note From the specifications available in the download section of the Nordic Semiconductor website:
+ *       http://www.nordicsemi.com/kor/Products/2.4GHz-RF/nRF24L01P
  */
 
-#ifndef _NRF24L01_MNEMONICS_H
-#define _NRF24L01_MNEMONICS_H
+#ifndef _NRF24L01_MNEMONICS_H__
+#define _NRF24L01_MNEMONICS_H__
 
 
-// SPI Commands
+/**
+ * \name SPI Commands
+ *
+ * @{
+ */
 
-#define R_REGISTER          0x00 // 000A AAAA
-#define W_REGISTER          0x20 // 001A AAAA
-#define R_RX_PAYLOAD        0x61 // 0110 0001
-#define W_TX_PAYLOAD        0xA0 // 1010 0000
-#define FLUSH_TX            0xE1 // 1110 0001
-#define FLUSH_RX            0xE2 // 1110 0010
-#define REUSE_TX_PL         0xE3 // 1110 0011
-#define R_RX_PL_WID         0x60 // 0110 0000
-#define W_ACK_PAYLOAD       0xA8 // 1010 1PPP
-#define W_TX_PAYLOAD_NOACK  0xB0 // 1011 0000
-#define NOP                 0xFF // 1111 1111
+#define R_REGISTER          0x00	// 000A AAAA
+#define W_REGISTER          0x20	// 001A AAAA
+#define R_RX_PAYLOAD        0x61	// 0110 0001
+#define W_TX_PAYLOAD        0xA0	// 1010 0000
+#define FLUSH_TX            0xE1	// 1110 0001
+#define FLUSH_RX            0xE2	// 1110 0010
+#define REUSE_TX_PL         0xE3	// 1110 0011
+#define R_RX_PL_WID         0x60	// 0110 0000
+#define W_ACK_PAYLOAD       0xA8	// 1010 1PPP
+#define W_TX_PAYLOAD_NOACK  0xB0	// 1011 0000
+#define NOP                 0xFF	// 1111 1111
+
+/**
+ * @}
+ */
 
 
-// Register Map
+
+/**
+ * \name Register Map
+ *
+ * @{
+ */
 
 #define CONFIG      0x00
 #define MASK_RX_DR  6
@@ -114,4 +130,10 @@
 #define EN_ACK_PAY  1
 #define EN_DYN_ACK  0
 
-#endif
+
+/**
+ * @}
+ */
+
+
+#endif	/* !_NRF24L01_MNEMONICS_H__ */
